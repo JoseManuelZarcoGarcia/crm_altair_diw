@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+.faq-item {
+border: 1px solid var(--color-border, #ccc);
+border-radius: 8px;
+margin-bottom: 1rem;
+background-color: var(--color-surface, #fff);
+}
+
+.faq-question {
+padding: 1rem;
+font-weight: bold;
+cursor: pointer;
+list-style: none;
+position: relative;
+}
+
+.faq-question::-webkit-details-marker {
+display: none;
+}
+
+.faq-question::after {
+content: "Modificar";
+position: absolute;
+right: 1rem;
+font-size: 1.5rem;
+}
+
+.faq-item[open] .faq-question::after {
+content: "Guardar";
+}
+
+.faq-item:focus-within {
+outline: 0,3px solid var(--color-primary, #bed9ec);
+}
